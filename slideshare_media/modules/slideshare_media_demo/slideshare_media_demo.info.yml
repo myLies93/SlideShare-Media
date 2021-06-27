@@ -1,0 +1,8 @@
+name: SlideShare media oEmbed Demo
+type: module
+description: 'Provides a test content infrastructure for SlideShare media oEmbed Demo.'
+package: SlideShare oEmbed
+core_version_requirement: ^9
+dependencies:
+  - slideshare_media:slideshare_media
+  - drupal:node

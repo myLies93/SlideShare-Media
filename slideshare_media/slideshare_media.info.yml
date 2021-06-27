@@ -1,0 +1,7 @@
+name: SlideShare media oEmbed
+type: module
+description: 'Provides oEmbed provider implementation for SlideShare service.'
+package: SlideShare oEmbed
+core_version_requirement: ^9
+dependencies:
+  - drupal:media

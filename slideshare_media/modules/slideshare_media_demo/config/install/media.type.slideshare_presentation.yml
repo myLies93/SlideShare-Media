@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - slideshare_media
+id: slideshare_presentation
+label: 'SlideShare presentation'
+description: ''
+source: 'oembed:slideshare'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers: {  }
+  source_field: field_media_oembed_slideshare
+field_map:
+  total_slides: field_slides

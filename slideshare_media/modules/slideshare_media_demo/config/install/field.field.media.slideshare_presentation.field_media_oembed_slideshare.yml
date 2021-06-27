@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_oembed_slideshare
+    - media.type.slideshare_presentation
+id: media.slideshare_presentation.field_media_oembed_slideshare
+field_name: field_media_oembed_slideshare
+entity_type: media
+bundle: slideshare_presentation
+label: 'SlideShare presentation'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

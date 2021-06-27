@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the slideshare_media_demo module.
+ */
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_install().
+ */
+function slideshare_media_demo_install() {
+  $entity_type_manager = \Drupal::entityTypeManager();
+  $media_storage = $entity_type_manager->getStorage('media');
+  $media = $media_storage->create([
+    'bundle' => 'slideshare_presentation',
+    'name' => 'Drupal for beginners',
+    'field_media_oembed_slideshare' => ['https://www.slideshare.net/kirkstenvon/beginners-guide-to-drupal']
+  ]);
+  $media->save();
+  $node = $entity_type_manager->getStorage('node')->create([
+    'type' => 'slideshare_demo',
+    'title' => 'Drupal tips for beginners',
+    'field_media' => [['target_id' => $media->id()]],
+  ]);
+  $node->save();
+  $url = Url::fromRoute('entity.node.canonical', ['node' => $node->id()])->toString();
+  \Drupal::messenger()->addStatus(t('The demo for SlideShare Media has been enabled. Proceed to the <a href=":url">demo page</a>.', [':url' => $url]));
+}

@@ -1,0 +1,18 @@
+slick_cdn:
+  js:
+    https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js: { type: external, minified: true }
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css: { type: external, minified: true }
+
+demo_slider:
+  js:
+    js/demo-slider.js: {}
+  css:
+    theme:
+      css/demo-slider.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+    - slideshare_media_demo/slick_cdn

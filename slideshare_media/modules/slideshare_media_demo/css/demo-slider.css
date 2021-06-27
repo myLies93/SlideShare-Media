@@ -1,0 +1,15 @@
+.demo-slick-slider {
+  max-width: 480px;
+}
+.demo-slick-slider ul.slick-dots {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.demo-slick-slider ul.slick-dots li {
+  display: block;
+}
+.demo-slick-slider ul.slick-dots button {
+  margin: 5px;
+}

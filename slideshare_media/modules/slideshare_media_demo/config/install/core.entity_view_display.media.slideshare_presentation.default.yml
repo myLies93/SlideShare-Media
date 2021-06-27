@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.slideshare_presentation.field_media_oembed_slideshare
+    - field.field.media.slideshare_presentation.field_slides
+    - image.style.large
+    - media.type.slideshare_presentation
+  module:
+    - media
+    - slideshare_media_demo
+_core:
+  default_config_hash: JjAmCqaxW84E2cV45LXCe3WjQPSu052HAJhV9exkotk
+id: media.slideshare_presentation.default
+targetEntityType: media
+bundle: slideshare_presentation
+mode: default
+content:
+  field_media_oembed_slideshare:
+    label: hidden
+    weight: 1
+    settings:
+      max_width: 0
+      max_height: 0
+    third_party_settings: {  }
+    type: oembed
+    region: content
+  field_slides:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: slideshare_media_demo_slick
+    region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,5 @@
+services:
+  slideshare_media.oembed.resource_fetcher:
+    class: Drupal\slideshare_media\OEmbed\SlideShareResourceFetcher
+    decorates: media.oembed.resource_fetcher
+    parent: media.oembed.resource_fetcher
